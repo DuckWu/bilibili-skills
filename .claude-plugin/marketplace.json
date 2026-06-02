@@ -1,0 +1,12 @@
+{
+  "name": "bilibili-to-obsidian",
+  "description": "B站视频 → Obsidian 笔记",
+  "plugins": [
+    {
+      "name": "bilibili-summary",
+      "description": "提取 B站视频的标题、描述、AI字幕，总结为 Obsidian 笔记",
+      "version": "1.0.0",
+      "path": "."
+    }
+  ]
+}

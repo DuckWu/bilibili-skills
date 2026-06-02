@@ -1,0 +1,8 @@
+{
+  "name": "bilibili-to-obsidian",
+  "description": "提取 B站视频内容（信息、AI字幕），整理为 Markdown 并保存到 Obsidian",
+  "version": "1.0.0",
+  "author": {
+    "name": "local"
+  }
+}

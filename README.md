@@ -20,8 +20,45 @@ English | [中文](#中文)
 
 ### Requirements
 
-- **Claude Code** (desktop or CLI)
+- **Claude Code** (desktop or CLI, v1.0+)
 - **BBDown** — install via `winget install BBDown` (Windows) or download from [releases](https://github.com/nilaoda/BBDown/releases)
+
+### Installation
+
+**Step 1: Install BBDown**
+
+```bash
+# Windows
+winget install BBDown
+
+# macOS / Linux (via GitHub releases)
+# Download from https://github.com/nilaoda/BBDown/releases
+```
+
+Restart your terminal after installing BBDown to refresh PATH.
+
+**Step 2: Install the skill**
+
+```bash
+# Clone the repo
+git clone https://github.com/DuckWu/bilibili-skills.git
+
+# Create the skills directory if it doesn't exist
+mkdir -p ~/.claude/skills
+
+# Copy the skill into Claude Code's skill directory
+# Windows PowerShell:
+Copy-Item -Recurse bilibili-skills/skills/bilibili-summary "$env:USERPROFILE\.claude\skills\bilibili-summary"
+
+# macOS / Linux:
+cp -r bilibili-skills/skills/bilibili-summary ~/.claude/skills/bilibili-summary
+```
+
+**Step 3: Restart Claude Code**
+
+The skill will appear as `/bilibili-summary` in the slash command list.
+
+> **Note:** To update the skill later, pull the latest changes and re-copy the skill directory.
 
 ### Usage
 
@@ -74,8 +111,45 @@ MIT
 
 ### 前提条件
 
-- **Claude Code**（桌面版或 CLI）
+- **Claude Code**（桌面版或 CLI，v1.0+）
 - **BBDown** — 通过 `winget install BBDown`（Windows）安装，或从 [releases](https://github.com/nilaoda/BBDown/releases) 下载
+
+### 安装教程
+
+**第一步：安装 BBDown**
+
+```bash
+# Windows
+winget install BBDown
+
+# macOS / Linux（从 GitHub releases 下载）
+# https://github.com/nilaoda/BBDown/releases
+```
+
+安装后重启终端，确保 BBDown 命令可用。
+
+**第二步：安装 skill**
+
+```bash
+# 克隆仓库
+git clone https://github.com/DuckWu/bilibili-skills.git
+
+# 创建 skills 目录（如果不存在）
+mkdir -p ~/.claude/skills
+
+# 将 skill 复制到 Claude Code 的 skill 目录
+# Windows PowerShell：
+Copy-Item -Recurse bilibili-skills/skills/bilibili-summary "$env:USERPROFILE\.claude\skills\bilibili-summary"
+
+# macOS / Linux：
+cp -r bilibili-skills/skills/bilibili-summary ~/.claude/skills/bilibili-summary
+```
+
+**第三步：重启 Claude Code**
+
+重启后即可在 slash 命令列表中看到 `/bilibili-summary`。
+
+> **提示：** 后续更新 skill 只需 `git pull` 然后重新复制 skill 目录即可。
 
 ### 使用方法
 
